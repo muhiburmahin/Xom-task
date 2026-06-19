@@ -10,6 +10,11 @@ export default {
         },
         page: '#F8F9FB',
         card: '#FFFFFF',
+        nav: {
+          border: '#E4E7EC',
+          text: '#344054',
+          muted: '#98A2B3',
+        },
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
