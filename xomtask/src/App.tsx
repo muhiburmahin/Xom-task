@@ -7,6 +7,7 @@ import AboutSection from './components/about/AboutSection'
 import PortfolioSection from './components/portfolio/PortfolioSection'
 import XomSection from './components/gigs/XomSection'
 import ReviewsSection from './components/reviews/ReviewsSection'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <PortfolioSection />
         </ProfileLayout>
       </div>
+
+      <Footer />
     </div>
   )
 }

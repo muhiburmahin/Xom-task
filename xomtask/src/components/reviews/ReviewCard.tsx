@@ -37,11 +37,13 @@ export default function ReviewCard({ review, sellerName, sellerAvatar }: ReviewC
         </div>
 
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <p className="text-[14px] font-semibold leading-none text-[#101828]">{review.userName}</p>
-            <ShieldCheck className="h-4 w-4 shrink-0 text-[#7C3AED]" strokeWidth={2} />
-            <StarRow rating={review.rating} />
-            <span className="text-[12px] leading-none text-[#98A2B3]">{review.date}</span>
+          <div className="flex flex-col gap-1.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 sm:gap-y-1">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <p className="text-[14px] font-semibold leading-none text-[#101828]">{review.userName}</p>
+              <ShieldCheck className="h-4 w-4 shrink-0 text-[#7C3AED]" strokeWidth={2} />
+              <StarRow rating={review.rating} />
+            </div>
+            <span className="text-[12px] leading-none text-[#98A2B3] sm:shrink-0">{review.date}</span>
           </div>
 
           <div className="mt-2 flex items-center gap-1.5">
@@ -56,7 +58,7 @@ export default function ReviewCard({ review, sellerName, sellerAvatar }: ReviewC
       <p className="mt-3 text-[13px] leading-[1.65] text-[#344054]">{review.comment}</p>
 
       {review.reply ? (
-        <div className="mt-4 ml-[52px] rounded-xl border border-[#EAECF0] bg-[#F9FAFB] p-3 sm:p-4">
+        <div className="mt-4 ml-0 rounded-xl border border-[#EAECF0] bg-[#F9FAFB] p-3 sm:ml-[52px] sm:p-4">
           <div className="flex gap-2.5">
             <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full border border-[#E5E7EB] bg-white">
               <img
@@ -65,7 +67,7 @@ export default function ReviewCard({ review, sellerName, sellerAvatar }: ReviewC
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1">
               <p className="text-[12px] font-semibold leading-none text-[#101828]">Seller Reply</p>
               <p className="mt-2 text-[12px] leading-[1.6] text-[#667085]">{review.reply}</p>
             </div>

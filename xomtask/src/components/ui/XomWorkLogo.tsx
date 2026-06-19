@@ -1,4 +1,13 @@
-export default function XomWorkLogo() {
+interface XomWorkLogoProps {
+  variant?: 'header' | 'footer'
+}
+
+export default function XomWorkLogo({ variant = 'header' }: XomWorkLogoProps) {
+  const sizeClass =
+    variant === 'footer'
+      ? 'h-[42px] w-auto max-w-[158px]'
+      : 'h-8 w-auto max-w-[120px] sm:h-9 lg:h-[42px] lg:max-w-[160px]'
+
   return (
     <a
       href="/"
@@ -8,7 +17,7 @@ export default function XomWorkLogo() {
       <img
         src="/images/logo.png"
         alt="XomWork"
-        className="h-8 w-auto max-w-[120px] select-none object-contain object-left sm:h-9 lg:h-[42px] lg:max-w-[160px]"
+        className={`${sizeClass} select-none object-contain object-left`}
         draggable={false}
       />
     </a>
