@@ -1,11 +1,11 @@
-export default function UsFlag() {
+export default function UsFlag({ className }: { className?: string }) {
   return (
     <svg
       width="22"
       height="16"
       viewBox="0 0 22 16"
       aria-hidden="true"
-      className="shrink-0 overflow-hidden rounded-[2px] border border-[#E5E7EB]"
+      className={`shrink-0 overflow-hidden rounded-[2px] border border-[#E5E7EB] ${className ?? ''}`}
     >
       <rect width="22" height="16" fill="#B22234" />
       <path

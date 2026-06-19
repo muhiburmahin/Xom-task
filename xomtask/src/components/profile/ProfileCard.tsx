@@ -69,7 +69,7 @@ export default function ProfileCard() {
                 ))}
               </div>
               <span className="text-[10px] leading-none text-[#667085]">
-                5.0 ({sellerStats.reviewCount})
+                {sellerStats.avgRating} ({sellerStats.reviewCount})
               </span>
             </div>
           </StatBox>

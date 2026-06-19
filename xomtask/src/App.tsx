@@ -6,6 +6,7 @@ import ProfileSidebar from './components/profile/ProfileSidebar'
 import AboutSection from './components/about/AboutSection'
 import PortfolioSection from './components/portfolio/PortfolioSection'
 import XomSection from './components/gigs/XomSection'
+import ReviewsSection from './components/reviews/ReviewsSection'
 
 function App() {
   return (
@@ -17,7 +18,15 @@ function App() {
 
       <div className="relative">
         <HeroBanner />
-        <ProfileLayout sidebar={<ProfileSidebar />} below={<XomSection />}>
+        <ProfileLayout
+          sidebar={<ProfileSidebar />}
+          below={
+            <div className="flex flex-col gap-5 md:gap-6">
+              <XomSection />
+              <ReviewsSection />
+            </div>
+          }
+        >
           <AboutSection />
           <PortfolioSection />
         </ProfileLayout>

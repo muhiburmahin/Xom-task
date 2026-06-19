@@ -1,4 +1,4 @@
-import type { GigCard, PortfolioItem, SellerDetailItem, SellerStats, SkillBadge } from '../types'
+import type { GigCard, PortfolioItem, Review, SellerDetailItem, SellerStats, SkillBadge } from '../types'
 
 export const PORTFOLIO_IMAGE = '/images/image.png'
 
@@ -125,5 +125,46 @@ export const gigItems: GigCard[] = [
     sellerName: seller.name,
     sellerAvatar: seller.avatar,
     badge: 'ZomWork Choice',
+  },
+]
+
+export const reviewSummary = {
+  avgRating: 4.9,
+  totalCount: 1234,
+  positiveCount: 1221,
+  negativeCount: 13,
+}
+
+export const honestReviewsInfo = {
+  title: 'Honest Reviews',
+  points: [
+    'Only buyers who have completed payment for an order on XomWork can leave a review.',
+    "The numbers on buyers' avatars represent their levels. A buyer's level is a nearly 100% guarantee that their review is genuine.",
+    'Sellers on XomWork do not rate buyers, allowing buyers to leave honest feedback freely.',
+  ],
+}
+
+export const reviews: Review[] = [
+  {
+    id: '1',
+    userName: 'RJ_Shuvo',
+    userAvatar: seller.avatar,
+    country: 'United States',
+    rating: 5,
+    date: '2 Months ago',
+    comment:
+      "I'm very happy with my purchase on XomWork! The seller delivered exactly what I needed, on time and with great quality. I highly recommend working with them and will definitely place more orders in the future.",
+    reply:
+      'Thank you so much for the kind words. It was a pleasure working with you, and I truly appreciate your trust.',
+  },
+  {
+    id: '2',
+    userName: 'RJ_Shuvo',
+    userAvatar: seller.avatar,
+    country: 'United States',
+    rating: 4,
+    date: '2 Months ago',
+    comment:
+      "I'm very happy with my purchase on XomWork! The seller delivered exactly what I needed, on time and with great quality. I highly recommend working with them and will definitely place more orders in the future.",
   },
 ]
