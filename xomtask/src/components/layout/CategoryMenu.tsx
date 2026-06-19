@@ -16,13 +16,13 @@ export default function CategoryMenu() {
       aria-label="Categories"
     >
       <div className={`${SITE_CONTAINER} scrollbar-none overflow-x-auto`}>
-        <div className="flex h-10 min-w-max items-stretch sm:h-[40px] lg:min-w-0 lg:justify-between">
+        <div className="flex h-[42px] min-w-max items-stretch lg:min-w-0 lg:justify-between">
           {categories.map((category, index) => (
             <div
               key={category}
               className="relative flex shrink-0 items-center px-3 sm:px-4 lg:flex-1 lg:justify-center lg:px-2"
             >
-              <span className="whitespace-nowrap text-[12px] font-normal leading-none text-[#344054] sm:text-[13px]">
+              <span className="whitespace-nowrap text-[12px] font-semibold leading-none text-[#344054] sm:text-[13px]">
                 {category}
               </span>
               {index < categories.length - 1 && (

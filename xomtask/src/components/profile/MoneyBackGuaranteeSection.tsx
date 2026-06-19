@@ -4,15 +4,15 @@ import MoneyBackSeal from '../ui/MoneyBackSeal'
 const guaranteeCardClass =
   'relative w-full overflow-visible rounded-[20px] border-0 bg-white px-5 py-4 shadow-[0_2px_16px_rgba(16,24,40,0.06)]'
 
-function MoneyBackTooltip() {
+function MoneyBackTooltip({ className = '' }: { className?: string }) {
   return (
-    <div className="w-[285px] rounded-2xl bg-white px-4 py-2.5 shadow-[0_8px_24px_rgba(16,24,40,0.12)]">
+    <div
+      className={`rounded-2xl bg-white px-4 py-2.5 shadow-[0_8px_24px_rgba(16,24,40,0.12)] ${className}`}
+    >
       <h4 className="text-[14px] font-semibold leading-tight text-[#344054]">
         {moneyBackGuarantee.infoTitle}
       </h4>
-      <p className="mt-1 text-[12px] leading-snug text-[#667085]">
-        {moneyBackGuarantee.infoText}
-      </p>
+      <p className="mt-1 text-[12px] leading-snug text-[#667085]">{moneyBackGuarantee.infoText}</p>
     </div>
   )
 }
@@ -35,14 +35,20 @@ export default function MoneyBackGuaranteeSection() {
               ?
             </span>
           </div>
-          <p className="mt-1.5 max-w-[155px] text-[13px] leading-snug text-[#667085]">
+          <p className="mt-1.5 text-[13px] leading-snug text-[#667085] lg:max-w-[155px]">
             {moneyBackGuarantee.subtitle}
           </p>
         </div>
       </div>
 
-      <div className="absolute right-[-200px] top-3 z-10">
-        <MoneyBackTooltip />
+      {/* Mobile / Tablet — tooltip stacked below */}
+      <div className="mt-4 lg:hidden">
+        <MoneyBackTooltip className="w-full shadow-[0_2px_12px_rgba(16,24,40,0.08)]" />
+      </div>
+
+      {/* Desktop — tooltip overlaps to the right */}
+      <div className="absolute right-[-200px] top-3 z-10 hidden lg:block">
+        <MoneyBackTooltip className="w-[285px]" />
       </div>
     </section>
   )
