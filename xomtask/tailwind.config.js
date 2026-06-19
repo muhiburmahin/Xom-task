@@ -20,7 +20,7 @@ export default {
         sans: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)',
+        'brand-gradient': 'linear-gradient(to right, #7C3AED 0%, #EC4899 100%)',
       },
       boxShadow: {
         card: '0 2px 12px rgba(0, 0, 0, 0.08)',

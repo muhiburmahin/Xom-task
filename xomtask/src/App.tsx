@@ -1,6 +1,10 @@
 import Navbar from './components/layout/Navbar'
 import CategoryMenu from './components/layout/CategoryMenu'
 import HeroBanner from './components/layout/HeroBanner'
+import ProfileLayout from './components/layout/ProfileLayout'
+import ProfileCard from './components/profile/ProfileCard'
+import AboutSection from './components/about/AboutSection'
+import PortfolioSection from './components/portfolio/PortfolioSection'
 
 function App() {
   return (
@@ -9,7 +13,14 @@ function App() {
         <Navbar />
         <CategoryMenu />
       </header>
-      <HeroBanner />
+
+      <div className="relative">
+        <HeroBanner />
+        <ProfileLayout sidebar={<ProfileCard />}>
+          <AboutSection />
+          <PortfolioSection />
+        </ProfileLayout>
+      </div>
     </div>
   )
 }

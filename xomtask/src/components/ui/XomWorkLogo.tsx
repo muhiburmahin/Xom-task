@@ -1,5 +1,3 @@
-import { layout } from '../../constants/layout'
-
 export default function XomWorkLogo() {
   return (
     <a
@@ -10,8 +8,7 @@ export default function XomWorkLogo() {
       <img
         src="/images/logo.png"
         alt="XomWork"
-        style={{ height: layout.logoHeight }}
-        className="w-auto max-w-[160px] select-none object-contain object-left"
+        className="h-8 w-auto max-w-[120px] select-none object-contain object-left sm:h-9 lg:h-[42px] lg:max-w-[160px]"
         draggable={false}
       />
     </a>

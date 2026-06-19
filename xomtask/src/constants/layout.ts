@@ -9,6 +9,11 @@ export const layout = {
   searchBtnSize: 40,
   logoHeight: 42,
   avatarSize: 38,
-  sidebarWidth: 300,
-  contentOverlap: 96,
+  sidebarWidth: 380,
+  contentGap: 32,
+  contentOverlap: {
+    mobile: 28,
+    tablet: 44,
+    desktop: 58,
+  },
 } as const
