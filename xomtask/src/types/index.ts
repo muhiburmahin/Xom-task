@@ -39,3 +39,10 @@ export interface SellerStats {
   avgRating: number
   reviewCount: number
 }
+
+export interface SellerDetailItem {
+  id: string
+  label: string
+  icon: 'flag' | 'clock' | 'shield' | 'cart' | 'package'
+  flag?: string
+}

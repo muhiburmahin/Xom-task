@@ -77,7 +77,7 @@ export default function ProfileCard() {
 
         <button
           type="button"
-          className="mt-4 flex h-[42px] w-full items-center justify-center gap-2 rounded-full bg-[#7C3AED] text-[13px] font-medium text-white transition-opacity hover:opacity-90"
+          className="mt-4 flex h-[42px] w-full items-center justify-center gap-2 rounded-full bg-[#7C3AED] text-[13px] font-medium text-white"
         >
           <MessageSquare className="h-4 w-4" strokeWidth={2} />
           Contact Me
@@ -86,14 +86,14 @@ export default function ProfileCard() {
         <div className="mt-3 grid grid-cols-2 gap-3">
           <button
             type="button"
-            className="flex h-[38px] items-center justify-center gap-1.5 rounded-xl border border-[#E4E7EC] bg-white text-[12px] font-medium text-[#667085] transition-colors hover:bg-[#F9FAFB]"
+            className="flex h-[38px] items-center justify-center gap-1.5 rounded-xl border border-[#E4E7EC] bg-white text-[12px] font-medium text-[#667085]"
           >
             <Heart className="h-3.5 w-3.5" strokeWidth={2} />
             Save
           </button>
           <button
             type="button"
-            className="flex h-[38px] items-center justify-center gap-1.5 rounded-xl border border-[#E4E7EC] bg-white text-[12px] font-medium text-[#667085] transition-colors hover:bg-[#F9FAFB]"
+            className="flex h-[38px] items-center justify-center gap-1.5 rounded-xl border border-[#E4E7EC] bg-white text-[12px] font-medium text-[#667085]"
           >
             <Share2 className="h-3.5 w-3.5" strokeWidth={2} />
             Share

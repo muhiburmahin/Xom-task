@@ -1,4 +1,4 @@
-import type { PortfolioItem, SellerStats, SkillBadge } from '../types'
+import type { GigCard, PortfolioItem, SellerDetailItem, SellerStats, SkillBadge } from '../types'
 
 export const PORTFOLIO_IMAGE = '/images/image.png'
 
@@ -18,6 +18,31 @@ export const sellerStats: SellerStats = {
   runningOrders: 4,
   avgRating: 4.9,
   reviewCount: 1,
+}
+
+export const sellerBadges = [
+  { id: '1', emoji: '🏆', bg: '#FEF3C7' },
+  { id: '2', emoji: '🎖️', bg: '#F4EBFF' },
+  { id: '3', emoji: '🎓', bg: '#ECFDF3' },
+  { id: '4', emoji: '⭐', bg: '#FEF9C3' },
+]
+
+export const sellerDetails: SellerDetailItem[] = [
+  { id: '1', icon: 'flag', label: 'United States', flag: '🇺🇸' },
+  { id: '2', icon: 'clock', label: 'Response in 1 hour' },
+  { id: '3', icon: 'shield', label: 'Member since 2024' },
+  { id: '4', icon: 'cart', label: 'Order successfully Submitted 96%' },
+  { id: '5', icon: 'package', label: 'Order delivered on time 98%' },
+]
+
+export const languages = ['English', 'Francie']
+
+export const moneyBackGuarantee = {
+  title: '100% Money-Back Guarantee',
+  subtitle: "If you're not satisfied with the result, we'll refund your money",
+  infoTitle: '100% Money-Back',
+  infoText:
+    'If the seller is unable to complete the order, the XomWork team will refund the payment.',
 }
 
 export const aboutText =
@@ -54,5 +79,51 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Order number 562',
     subtitle: 'Food delivery Landing page UI/UX Design App design landing page',
     image: PORTFOLIO_IMAGE,
+  },
+]
+
+export const gigItems: GigCard[] = [
+  {
+    id: '1',
+    title: 'Landing page UI UX Design Mobile app UI UX Design website Figma',
+    image: PORTFOLIO_IMAGE,
+    rating: 4.9,
+    reviewCount: 1234,
+    price: 100,
+    sellerName: seller.name,
+    sellerAvatar: seller.avatar,
+    badge: 'ZomWork Choice',
+  },
+  {
+    id: '2',
+    title: 'Landing page UI UX Design Mobile app UI UX Design website Figma',
+    image: PORTFOLIO_IMAGE,
+    rating: 4.9,
+    reviewCount: 1234,
+    price: 50,
+    sellerName: seller.name,
+    sellerAvatar: seller.avatar,
+  },
+  {
+    id: '3',
+    title: 'Landing page UI UX Design Mobile app UI UX Design website Figma',
+    image: PORTFOLIO_IMAGE,
+    rating: 4.9,
+    reviewCount: 1234,
+    price: 250,
+    sellerName: seller.name,
+    sellerAvatar: seller.avatar,
+    badge: 'ZomWork Choice',
+  },
+  {
+    id: '4',
+    title: 'Landing page UI UX Design Mobile app UI UX Design website Figma',
+    image: PORTFOLIO_IMAGE,
+    rating: 4.9,
+    reviewCount: 1234,
+    price: 80,
+    sellerName: seller.name,
+    sellerAvatar: seller.avatar,
+    badge: 'ZomWork Choice',
   },
 ]

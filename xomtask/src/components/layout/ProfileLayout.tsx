@@ -4,9 +4,10 @@ import { layout, SITE_CONTAINER } from '../../constants/layout'
 interface ProfileLayoutProps {
   sidebar: ReactNode
   children: ReactNode
+  below?: ReactNode
 }
 
-export default function ProfileLayout({ sidebar, children }: ProfileLayoutProps) {
+export default function ProfileLayout({ sidebar, children, below }: ProfileLayoutProps) {
   const { sidebarWidth, contentGap } = layout
 
   return (
@@ -22,11 +23,13 @@ export default function ProfileLayout({ sidebar, children }: ProfileLayoutProps)
           } as React.CSSProperties
         }
       >
-        <aside className="mx-auto w-full lg:mx-0" style={{ maxWidth: sidebarWidth }}>
+        <aside className="mx-auto w-full overflow-visible lg:mx-0" style={{ maxWidth: sidebarWidth }}>
           {sidebar}
         </aside>
         <main className="flex min-w-0 flex-col gap-5 md:gap-6">{children}</main>
       </div>
+
+      {below ? <div className="mt-5 md:mt-6">{below}</div> : null}
     </div>
   )
 }
